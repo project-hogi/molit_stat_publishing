@@ -1,0 +1,9 @@
+$moduleImagesDir: "module-scroll-lock";
+
+body.scroll-lock{
+	overflow-y: scroll;
+	
+	.scroll-lock-wrap{
+		display: none;
+	}
+}

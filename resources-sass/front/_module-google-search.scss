@@ -1,0 +1,25 @@
+$moduleImagesDir: "module-google-search";
+
+html .gsc-control-cse{
+	background: none;
+	background: none;
+	padding: 0;
+	font-family: inherit;
+	
+	.gsc-input{
+		padding: 0;
+		vertical-align: top;
+	}
+	.gsc-input-box{
+		height: 37px;
+	}
+	input.gsc-search-button{
+		margin: 0;
+		vertical-align: top;
+		display: inline-block;
+		width: 54px;
+		height: 37px;
+		background: url(../images/google-search/submit.png) no-repeat !important;
+		border: none;
+	}
+}

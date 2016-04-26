@@ -1,0 +1,31 @@
+$moduleImagesDir: "board-default-tablet";
+
+.board-default-list{
+	a{
+		@include image(list, png, no-repeat, 100% 50%);
+		padding: 23px 135px + 29px 20px 29px;
+	}
+	.content{
+		max-height: 18px * 4;
+	}
+}
+.board-default-view{
+	.header{
+		padding: 20px 91px + 20px 15px 108px;
+	}
+	.subject{
+		margin-bottom: 10px;
+		font-size: 16px;
+		line-height: 1.5em;
+	}
+	.go-list{
+		width: 88px;
+		@include image(go-list, png, no-repeat, 50% 50%);
+	}
+	.hit{
+		width: 90px;
+	}
+	.content{
+		padding: 41px;
+	}
+}

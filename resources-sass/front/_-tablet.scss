@@ -1,0 +1,22 @@
+// Util Lib
+@import "../lib/util";
+@import "../lib/css3";
+
+// Shared
+$moduleBaseImagesDir: "../images";
+
+//@import "../shared/crud-tablet";
+
+// Admin
+$moduleBaseImagesDir: "../images";
+
+//@import "module-content-tablet";
+//@import "module-board-default-tablet";
+//@import "module-board-gallery-tablet";
+@import "module-board-gallery-introduce-tablet";
+//@import "module-toppopup-tablet";
+//@import "index-tablet";
+//@import "page-tablet";
+//@import "table-tablet";
+
+@import "crud-tablet";

@@ -1,0 +1,33 @@
+$moduleBaseImagesDir: "../images";
+
+/* mixin */
+@mixin ellipsis(){
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+
+@mixin image($name, $extension, $repeat:no-repeat, $position:0 0, $size:auto auto, $hdpi:false){
+	background:{
+		image:url(#{$moduleBaseImagesDir}/#{$moduleImagesDir}/#{$name}.#{$extension});
+		repeat:$repeat;
+		position:$position;
+		size:$size;
+	}
+	
+	@if $hdpi == true {
+			@media screen and (-webkit-min-device-pixel-ratio:1.5){
+			background:{
+				image:url(#{$moduleImagesDir}#{$name}@x2.#{$extension});
+			}
+		}
+	}
+}
+
+@mixin clear-float(){
+	&:after{
+		display:block;
+		content:" ";
+		clear:both;
+	}
+}

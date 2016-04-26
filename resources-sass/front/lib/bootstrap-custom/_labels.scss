@@ -1,0 +1,97 @@
+$moduleImagesDir: "labels";
+
+//
+// Labels
+// --------------------------------------------------
+
+.label {
+    display: inline;
+    padding: 4px 5px;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1em;
+    color: $label-color;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    
+    // [converter] extracted a& to a.label
+
+    // Empty labels collapse automatically (not available in IE8)
+    &:empty {
+        display: none;
+    }
+
+    // Quick fix for labels in buttons
+    .btn & {
+        position: relative;
+        top: -1px;
+    }
+}
+
+// Add hover effects, but only for links
+a.label {
+    &:hover,
+    &:focus {
+        color: $label-link-hover-color;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+// Colors
+// Contextual variations (linked labels get darker on :hover)
+
+.label-default {
+	border-color: #909090;
+    background-color: #a8a8a8;
+}
+.label-primary {
+	border-color: #0059c8;
+    background-color: #0072ff;
+}
+.label-success {
+	border-color: #2c810f;
+	background-color: #41a021;
+}
+.label-info {
+	border-color: #178ec6;
+	background-color: #3ea7d9;
+}
+.label-warning {
+	border-color: #db8100;
+    background-color: #f0a100;
+}
+.label-danger {
+	border-color: #bb2a25;
+	background-color: #d9534f;
+}
+.label-normal {
+	border-color: #c0c0c0;
+	background-color: #fff;
+    color: #333;
+}
+
+// Special Style
+.label-best{
+    border-color: #bb2a25;
+    background-color: #d9534f;
+    padding-left: 19px;
+    @include image(label-best, png, no-repeat, 3px 50%);
+}
+.label-good{
+    border-color: #178ec6;
+    background-color: #3ea7d9;
+    padding-left: 19px;
+    @include image(label-good, png, no-repeat, 3px 50%);
+}
+.label-encourage{
+    border-color: #909090;
+    background-color: #a8a8a8;
+    padding-left: 19px;
+    @include image(label-encourage, png, no-repeat, 3px 50%);
+}

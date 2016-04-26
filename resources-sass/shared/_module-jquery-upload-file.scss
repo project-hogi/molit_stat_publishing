@@ -1,0 +1,78 @@
+$moduleImagesDir: "module-jquery-upload-file";
+
+.ajax-file-upload {
+	display: inline-block;
+	padding: 0 14px;
+	vertical-align: middle;
+	background-color: #337ab7;
+	border: 1px solid #2e6da4;
+	border-radius: 4px;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 30px;
+	color: #fff;
+	
+	&, *{
+		cursor: pointer !important;
+	}
+}
+
+.ajax-upload-dragdrop {
+	margin: 8px 0;
+	border: 2px dotted #A5A5C7;
+	border-radius: 6px;
+	text-align: left;
+	vertical-align: middle;
+	padding: 8px;
+	color: #DADCE3;
+	
+	.ajax-file-upload{
+		margin-right: 8px;
+	}
+}
+
+.ajax-file-upload-statusbar {
+	position: relative;
+	overflow: hidden;
+	border: 1px solid #fff;
+	border-radius: 4px;
+}
+
+.ajax-file-upload-filename {
+	position: relative;
+	z-index: 10;
+	padding: 2px 5px;
+	font-size: 12px;
+	line-height: 1.5em;
+	color: #666;
+}
+
+.ajax-file-upload-progress {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.ajax-file-upload-bar {
+	background-color: #e2f4ff;
+	width: 0;
+	height: 100%;
+}
+
+.ajax-file-upload-percent {
+	position: absolute;
+	display: inline-block;
+	top: 3px;
+	left: 48%
+}
+
+.ajax-file-upload-red {
+	
+}
+
+.ajax-file-upload-green {
+	
+}

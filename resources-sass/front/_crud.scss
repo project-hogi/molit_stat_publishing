@@ -1,0 +1,315 @@
+$moduleImagesDir: "crud";
+
+.crud-search {
+    position: relative;
+    margin: 0 1px 12px 0;
+    padding: 14px 73px 14px 75px;
+    background-color: #f8f9f9;
+    border: 1px solid #d4d4d4;
+    border-bottom-color: #bebebe;
+    @include image(crud-search, png, no-repeat, 0 50%);
+    box-shadow: 1px 2px 0 rgba(0, 0, 0, 0.04);
+    
+    .control-label{
+        display: none;
+    }
+    .form-group{
+        margin: 0;
+        padding: 0;
+    }
+    button[type="submit"]{
+        position: absolute;
+        right: 10px;
+        top: 9px;
+    }
+    .help-block{
+        margin-bottom: 0;
+        
+        &:empty{
+            display: none;
+        }
+    }
+    .form-control{
+       vertical-align: middle;
+    }
+    select.form-control{
+       margin-right: 24px;
+    }
+    .options{
+       display: inline-block;
+       vertical-align: middle;
+       
+       input{
+           vertical-align: middle;
+           margin: 0 2px 0 0;
+       }
+       label{
+           vertical-align: middle;
+           margin: 0 24px 0 0;
+       }
+    }
+}
+.nav-tabs{
+    margin-bottom: 12px;
+}
+.detail-view{
+    border-top: 2px solid #545454;
+    
+    th{
+        width: 20%;
+    }
+}
+table.crud-list{
+    table-layout: fixed;
+    width: 100%;
+    margin: 12px 0;
+    border-top: 2px solid #858687;
+    border-bottom: 1px solid #d4d4d4;
+    
+    th, td{
+        font-size: 13px;
+        line-height: 1.5em;
+        text-align: center;
+    }
+    th{
+        padding: 9px 0;
+        border-left: 1px solid #ebebeb;
+        border-bottom: 1px solid #d4d4d4;
+        background-color: #fcfcfc;
+        
+        &:first-child{
+            border-left: none;
+        }
+    }
+    td{
+        padding: 8px 8px;
+        border-top: 1px solid #ececec;
+    }
+    tbody tr{
+        @include transition(background-color .3s);
+        
+        &:hover{
+            background-color: #ffffff;
+        }
+    }
+    .active{
+        background-color: $brand-success !important;
+        
+        td, a{
+            color: #fff;
+        }
+        .label-success{
+            background-color: #fff !important;
+            color: $brand-success;
+        }
+    }
+    .current{
+        background-color: $brand-primary !important;
+        
+        td, a{
+            color: #fff;
+        }
+        .label-success{
+            background-color: #fff !important;
+            color: $brand-primary;
+        }
+    }
+    a{
+       display: block;
+       @include ellipsis();
+       padding: 4px 0;
+       margin: -4px 0;
+       
+       .label{
+           margin-left: 3px;
+       }
+    }
+}
+@mixin crud-table-row-state($state, $background) {
+  // Exact selectors below required to override `.table-striped` and prevent
+  // inheritance to nested tables.
+  table.crud-list > thead > tr,
+  table.crud-list > tbody > tr,
+  table.crud-list > tfoot > tr {
+    > td.#{$state},
+    > th.#{$state},
+    &.#{$state} > td,
+    &.#{$state} > th {
+      background-color: $background;
+    }
+  }
+}
+@include crud-table-row-state('active', $brand-primary);
+@include crud-table-row-state('success', $state-success-bg);
+@include crud-table-row-state('info', $state-info-bg);
+@include crud-table-row-state('warning', $state-warning-bg);
+@include crud-table-row-state('danger', $state-danger-bg);
+table.crud-form{
+    width: 100%;
+    margin: 12px 0;
+    background-color: #f4f4f4;
+    border: 1px solid #bcbcbc;
+    
+    th, td{
+        border-left: 1px solid #e2e2e2;
+        border-top: 1px solid #e2e2e2;
+        vertical-align: middle;
+        font-size: 13px;
+        line-height: 1.4em;
+        
+        &:first-child{
+            border-left: none;
+        }
+    }
+    tr:first-child{
+        th, td{
+            border-top: none;
+        }
+    }
+    th{
+        padding: 10px 0;
+        width: 18%;
+        min-width: 80px;
+        background-color: #ffffff;
+        text-align: center;
+        color: #666666;
+        
+        .form-label{
+            margin: 0;
+        }
+    }
+    td{
+        padding: 5px 8px;
+        overflow: hidden;
+        color: #444444;
+        
+        .form-label{
+            margin: 0 8px;
+            line-height: 34px;
+            white-space:nowrap;
+        }
+        .form-control{
+            width: 100%;
+            margin-right: 4px;
+        }
+        &.subject{
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+    .input-box{
+        float: left;
+        margin: 4px 12px 4px 0;
+        width: 50%;
+        max-width: 548px;
+        background-color: #fff;
+        border: 1px solid #bababa;
+        min-height: 60px;
+        
+        .options{
+            padding: 3px 10px;
+        }
+    }
+    .options{
+        padding: 2px 4px;
+        font-size: 12px;
+        line-height: 22px;
+        color: #282828;
+        
+        label{
+            display: inline-block;
+            cursor: pointer;
+            margin: 0 12px 0 0;
+        }
+        input, select{
+            margin: 0 0 0 4px;
+            vertical-align: middle;
+        }
+        input[type="checkbox"], input[type="radio"]{
+            margin-left: 0;
+            margin-right: 2px;
+        }
+    }
+    .help-block{
+        margin: 6px 3px;
+        color: #a94442;
+    }
+}
+table.crud-form-split{
+    th{
+        width: 30%;
+    }
+}
+.files{
+    margin-top: 24px;
+    @include image(files, png, no-repeat, 0 3px);
+	padding-left: 56px;
+
+    a{
+        text-decoration: underline;
+    }
+    &:empty{
+        display: none;
+    }
+}
+.crud-view-content{
+	margin: 24px 0;
+	padding-bottom: 24px;
+	border-bottom: 1px solid #bcbcbc;
+	
+	p{
+	   margin: 6px 0;
+	}
+}
+.crud-comments{
+	ul{
+	   border-top: 1px solid #c7c7c7;
+	   border-bottom: 1px solid #c7c7c7;
+	   
+	   li{
+	       position: relative;
+	       border-top: 1px solid #dfdfdf;
+	       padding: 12px 166px 10px 63px;
+	       min-height: 70px - 12px - 10px;
+	       font-size: 13px;
+	       line-height: 1.4em;
+	       color: #444;
+	       
+	       &:first-child{
+	           border-top: none;
+	       }
+	       .image{
+	           position: absolute;
+	           left: 10px;
+	           top: 15px;
+	           display: inline-block;
+	           width: 40px;
+	           height: 40px;
+	           background-color: #e4e4e4;
+	           background-position: 50% 50%;
+	           background-repeat: no-repeat;
+	       }
+	       .no-image{
+	           @include image(comments, png, no-repeat, 50% 50%);
+	       }
+	       .subject{
+	           display: block;
+	           margin-bottom: 4px;
+	           font-weight: bold;
+	           color: #008cc5;
+	       }
+	       .btn-group{
+	           position: absolute;
+	           top: 21px;
+	           right: 10px;
+	       }
+	       .datetime{
+	           position: absolute;
+	           top: 47px;
+	           right: 10px;
+	           font-size: 12px;
+	           color: #999999;
+	       }
+	   }
+    }
+}

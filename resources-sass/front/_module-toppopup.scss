@@ -1,0 +1,116 @@
+$moduleImagesDir: "module-toppopup";
+
+.module-toppopup-widget {
+	position: relative;
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	.phone {
+		margin-top: -116px;
+		height: 116px;
+		li {
+			display: none;
+			width: 100%;
+			text-align: center;
+			&:first-child {
+				display: block;
+			}
+		}
+	}
+	.tablet-gt {
+		display: none;
+	}
+	.desktop {
+		display: none;
+	}
+	.has-image {
+		position: relative;
+		max-width: 176px !important;
+		padding-left: 126px !important;
+	}
+	.image {
+		position: absolute;
+		left: 18px;
+		top: 0;
+		display: inline-block;
+		width: 90px;
+		height: 100%;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	.item {
+		display: inline-block;
+		max-width: 284px;
+		padding: 18px 18px 15px;
+		height: 83px;
+		text-align: left;
+	}
+	.subject {
+		display: block;
+		font-size: 15px;
+		font-weight: bold;
+		line-height: 1.2em;
+		letter-spacing: -2px;
+		color: #333;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		span {
+			display: block;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			&:first-child {
+				color: #ff5a00;
+			}
+		}
+	}
+	.content {
+		display: block;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		letter-spacing: -1px;
+		color: #8e8e8e;
+	}
+	.url {
+		display: inline-block;
+		margin-top: 4px;
+		padding: 0 20px 0 5px;
+		@include image(widget, png, no-repeat, 100% 50%);
+		border: 1px solid #dedede;
+		border-radius: 3px;
+		font-size: 11px;
+		line-height: 21px;
+		letter-spacing: -1px;
+		color: #454545;
+	}
+	.close-one-day-button {
+		position: absolute;
+		right: 25px;
+		bottom: 0;
+		z-index: 200;
+		background-color: #fff;
+		display: inline-block;
+		padding: 0 8px;
+		height: 25px;
+		font-size: 11px;
+		line-height: 25px;
+		letter-spacing: -1px;
+		color: #666;
+	}
+	.close-button {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		z-index: 200;
+		@include image(widget-2, png, no-repeat, 100% 50%, 25px 25px, true);
+		display: inline-block;
+		width: 25px;
+		height: 25px;
+		font-size: 0;
+	}
+}

@@ -1,0 +1,59 @@
+$moduleImagesDir: "board-qna";
+
+.board-qna-view{
+	margin: 12px 0;
+	border-top: 2px solid #545861;
+	border-bottom: 1px solid #545861;
+	padding-bottom: 20px;
+	
+	.subject{
+		display: block;
+		margin: 0;
+		background: none;
+		border-bottom: 1px solid #545861;
+		padding: 14px 20px;
+		font-size: 13px;
+		font-weight: bold;
+		line-height: 1.6em;
+		color: #333;
+	}
+	.info{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		border-bottom: 1px solid #e3e3e3;
+		background-color: #f4f4f4;
+		font-size: 12px;
+		font-weight: normal;
+		line-height: 1.5em;
+		color: rgb(84, 88, 97);
+		
+		li{
+			display: inline-block;
+			margin: 12px 48px 12px 0;
+		}
+		strong{
+			margin: 0 20px;
+			font-weight: bold;
+			color: #333;
+		}
+	}
+	.content{
+		padding: 20px;
+		
+		img{
+			max-width: 100%;
+		}
+	}
+	.answer{
+		margin-top: 20px;
+		border-top: 1px solid #545861;
+	}
+	.answer-content{
+		padding: 20px;
+		
+		img{
+			max-width: 100%;
+		}
+	}
+}

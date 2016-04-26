@@ -1,0 +1,58 @@
+$moduleImagesDir: "list";
+
+.list-primary{
+	margin: 12px 0;
+	padding: 0;
+	list-style: none;
+	
+	>li{
+		margin: 30px 0;
+		padding-left: 10px;
+		
+		strong:first-child{
+			display: block;
+			margin: 0 0 4px -10px;
+			padding-left: 7px;
+			@include image(primary, png, no-repeat, 0 50%);
+			font-size: 16px;
+			font-weight: bold;
+			line-height: 1.4em;
+			letter-spacing: -1px;
+			color: #333;
+		}
+	}
+}
+.list-year{
+	margin: 12px 0;
+	padding: 0;
+	list-style: none;
+	
+	>li{
+		position: relative;
+		padding-left: 50px;
+		
+		strong:first-child{
+			position: absolute;
+			left: 0;
+			top: 0;
+			font-weight: normal;
+		}
+	}
+}
+.list-step{
+	margin: 12px 0;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+	
+	>li{
+		float: left;
+		padding: 0 16px 0 9px + 16px;
+		@include image(step, png, no-repeat, 0 50%);
+		
+		&:first-child{
+			padding-left: 0;
+			background: none;
+		}
+	}
+}

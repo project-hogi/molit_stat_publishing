@@ -1,0 +1,220 @@
+// Button Group
+.btns{
+        margin: 24px 0;
+        text-align: center;
+}
+
+// Base Styles
+.btn {
+    display: inline-block;
+    margin-bottom: 0; // For input.btn
+    font-weight: $btn-font-weight;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    border-radius: 3px;
+    white-space: nowrap;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1.4em;
+    letter-spacing: -1px;
+    color: #fff;
+    @include user-select(none);
+    @include transition(border-color .3s, background-color .3s, color .3s);
+
+    &:hover,
+    &:focus,
+    &.focus {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    &:active,
+    &.active {
+        outline: 0;
+        background-image: none;
+        @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+    }
+
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        cursor: $cursor-disabled;
+        pointer-events: none; // Future-proof disabling of clicks
+        @include opacity(.65);
+        @include box-shadow(none);
+    }
+}
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn-default {
+    border-color: #9b9b9b;
+    background-color: #9b9b9b;
+    
+    &:hover,
+    &:focus,
+    &.focus {
+        border-color: #818181;
+        background-color: #818181;
+    }
+}
+.btn-primary {
+	border-color: #2e4b70;
+	background-color: #2e4b70;
+    
+    &:hover,
+    &:focus,
+    &.focus {
+        border-color: #254166;
+        background-color: #254166;
+    }
+}
+.btn-success {
+    border-color: #4cae4c;
+    background-color: #4cae4c;
+    
+    &:hover,
+    &:focus,
+    &.focus {
+        border-color: #3b993b;
+        background-color: #3b993b;
+    }
+}
+.btn-info {
+    border-color: #3ea7d9;
+    background-color: #3ea7d9;
+    
+    &:hover,
+    &:focus,
+    &.focus {
+        border-color: #3199cb;
+        background-color: #3199cb;
+    }
+}
+.btn-warning {
+    border-color: #f0a100;
+    background-color: #f0a100;
+    
+    &:hover,
+    &:focus,
+    &.focus {
+        border-color: #d79000;
+        background-color: #d79000;
+    }
+}
+.btn-danger {
+    border-color: #e75936;
+    background-color: #e75936;
+    
+    &:hover,
+    &:focus,
+    &.focus {
+        border-color: #d94a26;
+        background-color: #d94a26;
+    }
+}
+.btn-normal {
+    border-color: #bcbcbc;
+    background-color: #ffffff;
+    color: #333;
+    
+    &:hover,
+    &:focus,
+    &.focus {
+        border-color: #a5a5a5;
+        background-color: #f8f8f8;
+        color: #333;
+    }
+}
+
+
+// Link buttons
+// -------------------------
+
+// Make a button look and behave like a link
+.btn-link {
+    color: $link-color;
+    font-weight: normal;
+    border-radius: 0;
+
+    &,
+    &:active,
+    &.active,
+    &[disabled],
+    fieldset[disabled] & {
+        background-color: transparent;
+        @include box-shadow(none);
+    }
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: transparent;
+    }
+    &:hover,
+    &:focus {
+        color: $link-hover-color;
+        text-decoration: $link-hover-decoration;
+        background-color: transparent;
+    }
+    &[disabled],
+    fieldset[disabled] & {
+        &:hover,
+        &:focus {
+            color: $btn-link-disabled-color;
+            text-decoration: none;
+        }
+    }
+}
+
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-group-lg>.btn,
+.btn-lg {
+    padding: 13px 35px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.4em;
+}
+.btn-group-sm>.btn,
+.btn-sm {
+    // line-height: ensure proper height of button next to small input
+    @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $border-radius-small);
+}
+.btn-group-xs>.btn,
+.btn-xs {
+    @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $border-radius-small);
+}
+
+
+// Block button
+// --------------------------------------------------
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+    margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    &.btn-block {
+        width: 100%;
+    }
+}

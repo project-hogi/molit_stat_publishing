@@ -1,0 +1,21 @@
+$moduleImagesDir: "module-modal-box";
+
+.modal-box-primary,
+.modal-box-small,
+.modal-box-large{
+	>div{
+		>div{
+			/* Container */
+			>div{
+				/* Close Button */
+				>a[href$="#close"]{
+					right: 0;
+					top: 0;
+					width: 52px;
+					height: 50px;
+					@include image(close, png);
+				}
+			}
+		}
+	}
+}

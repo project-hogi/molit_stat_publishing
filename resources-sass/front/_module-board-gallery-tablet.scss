@@ -1,0 +1,38 @@
+$moduleImagesDir: "board-gallery-tablet";
+
+.board-gallery-list{
+	overflow: hidden;
+	
+	li{
+		float: left;
+		width: 33.33%;
+	}
+	a{
+		margin: 2px;
+	}
+	@media only screen and (min-width : 860px) {
+		li{
+			width: 25%;
+		}
+	}
+}
+.board-gallery-view{
+	.header{
+		padding: 20px 91px + 20px 15px 108px;
+	}
+	.subject{
+		margin-bottom: 10px;
+		font-size: 16px;
+		line-height: 1.5em;
+	}
+	.go-list{
+		width: 88px;
+		@include image(go-list, png, no-repeat, 50% 50%);
+	}
+	.hit{
+		width: 90px;
+	}
+	.content{
+		padding: 41px;
+	}
+}

@@ -1,0 +1,42 @@
+// Util Lib
+@import "../lib/util";
+@import "../lib/css3";
+@import "../lib/jquery-ui.min";
+
+// Lib
+@import "lib/bootstrap";
+
+// Shared
+$moduleBaseImagesDir: "../images";
+
+@import "../shared/reset";
+//@import "../shared/form";
+@import "../shared/layout-modal";
+//@import "../shared/module-jquery-upload-file";
+//@import "../shared/module-calendar";
+@import "../shared/module-modal-box-common";
+@import "../shared/module-modal-box";
+@import "../shared/module-scroll-lock";
+
+// Front
+$moduleBaseImagesDir: "../images";
+
+//@import "module-apply";
+//@import "module-google-search";
+//@import "module-content";
+//@import "module-board";
+//@import "module-board-default";
+//@import "module-board-gallery";
+@import "module-board-gallery-introduce";
+//@import "module-board-faq";
+//@import "module-board-qna";
+//@import "module-popup";
+//@import "module-toppopup";
+//@import "table";
+//@import "list";
+
+@import "special";
+@import "layout";
+@import "crud";
+@import "page";
+@import "etc";

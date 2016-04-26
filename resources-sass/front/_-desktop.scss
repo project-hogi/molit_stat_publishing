@@ -1,0 +1,22 @@
+// Util Lib
+@import "../lib/util";
+@import "../lib/css3";
+
+// Shared
+$moduleBaseImagesDir: "../images";
+
+@import "../shared/module-modal-box-common-desktop";
+@import "../shared/module-modal-box-desktop";
+@import "../shared/module-scroll-lock-desktop";
+
+// Admin
+$moduleBaseImagesDir: "../images";
+
+//@import "module-content-desktop";
+//@import "module-board-gallery-desktop";
+@import "module-board-gallery-introduce-desktop";
+//@import "module-toppopup-desktop";
+//@import "layout-desktop";
+//@import "page-desktop";
+//@import "index-desktop";
+@import "crud-desktop";

@@ -1,0 +1,64 @@
+$moduleImagesDir: "module-toppopup-desktop";
+
+.module-toppopup-widget {
+	.desktop {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		display: block;
+		z-index: 200;
+		
+		> div {
+			position: relative;
+			margin: 0 auto;
+			width: 912px;
+		}
+		.prev, .next{
+			position: absolute;
+			top: 41px;
+			display: inline-block;
+			width: 23px;
+			height: 48px;
+			border: 1px solid #e4e4e4;
+			border-right-color: #c6c6c6;
+			border-bottom-color: #c6c6c6;
+			border-radius: 4px;
+			box-shadow: 1px 1px 0 #f2f2f2;
+			background-color: #fff;
+		}
+		.prev {
+			left: -43px;
+			@include image(widget, png, no-repeat, 50% 50%);
+		}
+		.next {
+			right: -43px;
+			@include image(widget-2, png, no-repeat, 50% 50%);
+		}
+	}
+	.has-image {
+		max-width: 236px !important;
+		padding-left: 184px !important;
+	}
+	.image {
+		width: 130px;
+		background-size: auto;
+	}
+	.item {
+		max-width: 384px;
+		height: 90px;
+	}
+	.subject {
+		font-size: 18px;
+		line-height: 1.2em;
+	}
+	.tablet-gt ul li {
+		.item {
+			margin-left: 40px;
+		}
+		&:first-child .item {
+			margin-left: 0;
+			margin-right: 40px;
+		}
+	}
+}

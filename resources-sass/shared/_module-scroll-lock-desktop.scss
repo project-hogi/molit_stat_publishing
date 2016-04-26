@@ -1,0 +1,9 @@
+$moduleImagesDir: "module-scroll-lock-desktop";
+
+body.scroll-lock{
+	.scroll-lock-wrap{
+		display: block;
+		position: fixed;
+		width: 100%;
+	}
+}

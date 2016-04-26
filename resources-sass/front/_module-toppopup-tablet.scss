@@ -1,0 +1,50 @@
+$moduleImagesDir: "module-toppopup-tablet";
+
+.module-toppopup-widget {
+	.phone {
+		display: none;
+	}
+	.tablet-gt {
+		display: block;
+		height: 123px;
+		margin-top: -123px;
+		
+		ul {
+			display: none;
+			width: 100%;
+			overflow: hidden;
+			
+			&:first-child {
+				display: block;
+			}
+			li {
+				float: left;
+				width: 50%;
+				text-align: left;
+				@include image(widget, png, no-repeat, 0 50%);
+				
+				&:first-child {
+					text-align: right;
+					background: none;
+				}
+			}
+		}
+		.prev {
+			display: none;
+		}
+		.next {
+			display: none;
+		}
+	}
+}
+@media only screen and(min-width: 920px) {
+	.module-toppopup-widget .tablet-gt ul li {
+		.item {
+			margin-left: 40px;
+		}
+		&:first-child .item {
+			margin-left: 0;
+			margin-right: 40px;
+		}
+	}
+}

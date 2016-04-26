@@ -1,0 +1,25 @@
+$moduleImagesDir: "board-gallery-introduce-tablet";
+
+.board-gallery-introduce-list{
+	overflow: hidden;
+	
+	li{
+		float: left;
+		width: 33.33%;
+	}
+}
+.board-gallery-introduce-view{
+    padding: 30px 30px 30px 324px;
+    
+    .profile{
+        position: absolute;
+        left: 30px;
+        top: 30px;
+        width: 274px;
+        text-align: left;
+        
+        .image{
+            width: auto;
+        }
+    }
+}

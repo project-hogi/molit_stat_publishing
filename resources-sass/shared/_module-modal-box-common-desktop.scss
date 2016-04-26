@@ -1,0 +1,55 @@
+$moduleImagesDir: "module-modal-box-common-desktop";
+
+.modal-box{
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:1000;
+	width:100%;
+	
+	>div{
+		position:absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width:100%;
+		
+		>span{
+			display: block;
+			position:absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			width:100%;
+			cursor:pointer;
+		}
+		>div{
+			vertical-align:middle;
+			width:100%;
+			text-align:center;
+			
+			>div{
+				display:inline-block;
+				
+				.ie7 &{
+					display:inline;
+				}
+				>div, >iframe{
+					display:inline-block;
+					width: 840px;
+					
+					.ie7 &{
+						display:inline;
+					}
+				}
+				>a[href$="#close"]{
+					.ie7 &{
+						display:inline;
+					}
+				}
+			}
+		}
+	}
+}

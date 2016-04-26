@@ -1,0 +1,62 @@
+$moduleImagesDir: "module-modal-box-desktop";
+
+.modal-box{
+	>div{
+		/* Background */
+		>span{
+			background: #000;
+			@include opacity(.8);
+		}
+	}
+}
+.modal-box-primary,
+.modal-box-small,
+.modal-box-large{
+	>div{
+		>div{
+			/* Container */
+			>div{
+				margin: 120px 60px;
+				
+				/* Content */
+				>div, >iframe{
+					background-color: #fff;
+					box-shadow:0 0 10px rgba(#000, .4);
+				}
+			}
+		}
+	}
+}
+.modal-box-primary{
+	>div{
+		>div{
+			>div{
+				>div, >iframe{
+					width: 780px;
+				}
+			}
+		}
+	}
+}
+.modal-box-small{
+	>div{
+		>div{
+			>div{
+				>div, >iframe{
+					width: 340px;
+				}
+			}
+		}
+	}
+}
+.modal-box-large{
+	>div{
+		>div{
+			>div{
+				>div, >iframe{
+					width: 820px;
+				}
+			}
+		}
+	}
+}

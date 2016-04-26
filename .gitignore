@@ -1,0 +1,29 @@
+# phpstorm project files
+.idea
+
+# netbeans project files
+nbproject
+
+# sass cache
+.sass-cache
+
+# dreamweaver files
+_notes
+
+# windows thumbnail cache
+Thumbs.db
+
+# composer itself is not needed
+composer.phar
+
+# Mac DS_Store Files
+.DS_Store
+
+# phpunit itself is not needed
+phpunit.phar
+
+# local phpunit config
+/phpunit.xml
+
+# node js
+node_modules

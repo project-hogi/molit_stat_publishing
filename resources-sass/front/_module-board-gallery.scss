@@ -1,0 +1,209 @@
+$moduleImagesDir: "board-gallery";
+
+.board-gallery-list{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	
+	a{
+		display: block;
+		position: relative;
+		margin: 2px 0;
+		border: 1px solid #dddddd;
+		background-color: #fff;
+		padding-bottom: 48px;
+		@include transition(border-color .3s);
+		
+		.image-wrap{
+			display: block;
+			padding: 7px;
+			border-bottom: 1px solid #ebebeb;
+		}
+		.image{
+			@include image(no-image, jpg, no-repeat, 50% 50%, cover);
+			
+			&, span{
+				display: block;
+				height: 150px;
+			}
+			span{
+				@include transition(opacity .3s);
+				@include image(cover, png, no-repeat, 50% 50%);
+				@include opacity(0);
+			}
+		}
+		strong{
+			display: block;
+			overflow: hidden;
+			@include ellipsis();
+			margin: 12px 0 4px;
+			padding: 0 14px;
+			font-size: 14px;
+			display: block;
+			line-height: 1.4em;
+			letter-spacing: -1px;
+			color: #444;
+		}
+		.content{
+			display: block;
+			overflow: hidden;
+			padding: 0 14px;
+			font-size: 11px;
+			line-height: 16px;
+			height: 16px * 3;
+			color: #999;
+		}
+		&:focus, &:hover{
+			border-color: #666;
+			
+			.image{
+				span{
+					@include opacity(1);
+				}
+			}
+			strong{
+				color: #000;
+			}
+		}
+	}
+	img{
+		display: block;
+		width: 100%;
+	}
+	.name{
+		display: block;
+		padding: 0 14px;
+		font-size: 12px;
+		line-height: 1.5em;
+		color: #888888;
+	}
+	.info{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		display: block;
+		width: 100%;
+		@include image(list, png, repeat-x, 0 0);
+		background-color: #fafafa;
+		border-top: 1px solid #ebebeb;
+		height: 38px;
+		
+		.datetime{
+			display: inline-block;
+			padding-left: 14px;
+			font-size: 12px;
+			line-height: 38px;
+			color: #666;
+		}
+		.hit{
+			position: absolute;
+			right: 14px;
+			top: 0;
+			@include image(list-2, png, no-repeat, 0 50%);
+			display: inline-block;
+			padding-left: 27px;
+			font-size: 12px;
+			line-height: 38px;
+			color: #666;
+		}
+	}
+	@media only screen and (min-width : 480px) {
+		overflow: hidden;
+		
+		li{
+			float: left;
+			width: 50%;
+		}
+		a{
+			margin: 2px;
+		}
+	}
+}
+.board-gallery-view{
+	.box{
+		border: 1px solid #c9c9c9;
+		background-color: #fff;
+	}
+	.header{
+		position: relative;
+		border-bottom: 1px solid #c9c9c9;
+		padding: 10px 72px + 10px 6px 64px + 10px;
+	}
+	.subject{
+		margin-bottom: 4px;
+		font-size: 14px;
+		line-height: 1.5em;
+		color: #333;
+		
+		span{
+			vertical-align: middle;
+		}
+	}
+	.content{
+		border-top: 2px solid #f8f7f7;
+		padding: 17px;
+		font-size: 12px;
+		line-height: 19px;
+		color: #444;
+		
+		img{
+			max-width: 100%;
+		}
+	}
+	.go-list{
+		position: absolute;
+		left: 0;
+		top: 0;
+		display: inline-block;
+		width: 64px;
+		height: 100%;
+		border-right: 1px solid #e4e4e4;
+		@include image(go-list, png, no-repeat, 50% 50%);
+	}
+	.hit{
+		position: absolute;
+		right: 0;
+		top: 0;
+		display: inline-block;
+		width: 72px;
+		height: 100%;
+		border-left: 1px solid #e4e4e4;
+		padding: 0;
+		background: none;
+		
+		span{
+			position: absolute;
+			left: 0;
+			top: 50%;
+			display: block;
+			width: 100%;
+			margin-top: -20px;
+			padding: 21px 0 0;
+			@include image(view-hit, png, no-repeat, 50% 4px);
+			text-align: center;
+			font-size: 12px;
+			line-height: 19px;
+			color: #444;
+		}
+	}
+	.datetime{
+		margin-left: 0;
+	}
+	.name{
+		padding-right: 13px;
+		@include image(view-name, png, no-repeat, 100% 50%);
+	}
+	.btns{
+		margin: 20px 0;
+		text-align: center;
+	}
+	.go-list-2{
+		display: inline-block;
+		width: 130px;
+		height: 50px;
+		@include image(go-list-2, png);
+	}
+	.files{
+		margin: 20px;
+	}
+}

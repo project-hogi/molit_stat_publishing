@@ -8,6 +8,6 @@ var lib = [
 	"/resources/front/js/wrap/common.js",
 	"/resources/front/js/wrap/app.js"
 ];
-
+ 
 for(var idx in lib)
 	document.write('<script src="' + lib[idx] + '"></script>');
